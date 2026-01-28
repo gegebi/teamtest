@@ -176,3 +176,74 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* Partnership Inquiry Form Styles */
+#partnership-inquiry {
+    padding: 30px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#partnership-inquiry h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+#partnership-inquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#partnership-inquiry label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+#partnership-inquiry input[type="text"],
+#partnership-inquiry input[type="email"],
+#partnership-inquiry textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: var(--number-bg);
+    color: var(--number-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#partnership-inquiry input[type="text"]:focus,
+#partnership-inquiry input[type="email"]:focus,
+#partnership-inquiry textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.5);
+    outline: none;
+}
+
+#partnership-inquiry textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#partnership-inquiry button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+#partnership-inquiry button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
