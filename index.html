@@ -1,59 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Lotto Number Generator</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-    }
-    #lotto-numbers {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .number {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #f2f2f2;
-      margin: 0 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Lotto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Lotto Number Generator</h1>
-  <div id="lotto-numbers">
-    <div class="number"></div>
-    <div class="number"></div>
-    <div class="number"></div>
-    <div class="number"></div>
-    <div class="number"></div>
-    <div class="number"></div>
-  </div>
-  <button onclick="generateNumbers()">Generate</button>
-
-  <script>
-    function generateNumbers() {
-      const numbers = [];
-      while (numbers.length < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        if (!numbers.includes(randomNumber)) {
-          numbers.push(randomNumber);
-        }
-      }
-      numbers.sort((a, b) => a - b);
-
-      const numberElements = document.querySelectorAll('.number');
-      for (let i = 0; i < numberElements.length; i++) {
-        numberElements[i].textContent = numbers[i];
-      }
-    }
-  </script>
+    <div id="app">
+        <header>
+            <h1>Lucky Lotto</h1>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </header>
+        <main>
+            <div id="lotto-numbers">
+                <div class="number-placeholder"></div>
+                <div class="number-placeholder"></div>
+                <div class="number-placeholder"></div>
+                <div class="number-placeholder"></div>
+                <div class="number-placeholder"></div>
+                <div class="number-placeholder"></div>
+            </div>
+            <button id="generate-btn">Generate Numbers</button>
+        </main>
+        <footer>
+            <p>&copy; 2026 Lucky Lotto. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
